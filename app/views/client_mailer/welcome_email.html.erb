@@ -4,7 +4,8 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Bonjour  <%= @user.name %> et bienvenue chez nous !</h1>
+  <!-- tester la version client.first_name client.last_name si non fonctionel mettre uniquement client.first_name  -->
+    <h1>Bonjour <%=@client.first_name @client.last_name %> et bienvenue chez nous !</h1> 
     <p>
       Tu t'es inscrit sur Animalib en utilisant l'e-mail suivant : <%= @user.email %>.
     </p>

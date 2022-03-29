@@ -3,8 +3,8 @@ class DoctorMailer < ApplicationMailer
 
     def welcome_email
       @doctor = params[:doctor]
-      @url  = 'http://example.com/login'
-      mail(to: @doctor.email, subject: 'Bienvenue sur Animalib')
+      @url  = 'https://animalib-2.herokuapp.com/doctors/sign_in'
+      mail(to: @doctor.email, subject: 'Bienvenue sur Animalib, Doctor !')
     end
 
   end

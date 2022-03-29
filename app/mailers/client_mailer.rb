@@ -3,7 +3,7 @@ class ClientMailer < ApplicationMailer
 
     def welcome_email
       @client = params[:client]
-      @url  = 'http://example.com/login'
-      mail(to: @client.email, subject: 'Bienvenue sur Animalib')
+      @url  = 'https://animalib-2.herokuapp.com/clients/sign_in'
+      mail(to: @client.email, subject: 'Bienvenue sur Animalib, ton animal te remercie !')
     end
   end
