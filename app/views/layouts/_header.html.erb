@@ -1,0 +1,44 @@
+<!-- ========== HEADER ========== -->
+<head>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="logo">
+        <div class="col-md-6 card mb-6 box-shadow">
+          <img src="https://media.istockphoto.com/vectors/veterinary-clinic-vector-logo-vector-id1148571478?s=170x170"
+            class="card-img-top" alt="...">
+          ANIMALIB
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item btn-outline-secondary">
+           <%= link_to "Accueil", root_path,  class: "nav-link" %>
+          </li>
+          <li class="nav-item btn-outline-secondary">
+           <%= link_to "Team", static_page_team_path,  class: "nav-link" %>
+          </li>
+
+          <li class="nav-item btn-outline-secondary">
+           <%= link_to "Contact", static_page_contact_path,  class: "nav-link" %>
+          </li>
+
+          <li class="nav-item dropdown btn-outline-secondary">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">S'identifier</a>
+            <div class="dropdown-menu">
+             <%= link_to "Vétérinaire", doctor_session_path,  class: "dropdown-item"%>
+             <%= link_to "Client", client_session_path,  class: "dropdown-item"%>
+             <%= link_to "Inscription", new_client_registration_path,  class: "dropdown-item"%>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</head>
+<!-- ========== END HEADER ========== -->

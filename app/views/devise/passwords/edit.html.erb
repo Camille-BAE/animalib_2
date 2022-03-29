@@ -1,0 +1,32 @@
+<div class=bg_new_password>
+    <h1 class="text-center mx-auto text-secondary mb-6">Changer mon mot de passe</h1>
+    <br><br>
+  <div class="d-flex justify-content-center" style="max-width: auto;">
+   <br />
+
+
+   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+   <%= render "devise/shared/error_messages", resource: resource %>
+   <%= f.hidden_field :reset_password_token %>
+
+   <div class="field">
+     <%= f.label :mot_de_passe, "New password" %><br>
+    <input type="password" class="form-control" placeholder="********", autofocus: true>
+   </div>
+   <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br>
+    <% end %>
+   <div class="field">
+     <%= f.label :confirmation_mot_de_passe, "Confirm new password" %><br>
+    <input type="password_confirmation" class="form-control" placeholder="********", autofocus: true>
+   </div>
+ <div class="button text-center">
+   <div class="actions">
+      <%= f.submit "Changer mon mot de passe", class: "btn btn-secondary" %>
+   </div>
+     <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div></div>
+<br><br><br>

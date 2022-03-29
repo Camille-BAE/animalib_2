@@ -1,0 +1,42 @@
+<div class=bg_sign_up>
+    <h1 class="text-center mx-auto text-secondary mb-6">Inscription</h1>
+    <br /><br />
+  <div class="d-flex justify-content-center" style="max-width: auto;">
+   <br />
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    
+    <div class="field">
+      <%= f.label :email %><br />
+      <input type="email" class="form-control" placeholder="Adresse email" autofocus: true >
+    </div>
+    <br />
+
+    <div class="field">
+      <%= f.label :mot_de_passe %><br />
+      <input type="password" class="form-control" placeholder="********" autofocus: true >
+  
+    </div>
+
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+
+    <div class="field"><br />
+     <%= f.label :confirmation_du_mot_de_passe %><br />
+      <input type="password_confirmation" class="form-control" placeholder="********" autofocus: true >
+    </div>
+    <br />
+    <div class="button text-center">
+    <div class="actions">
+      <%= f.submit "S'inscrire", class: "btn btn-secondary" %>
+    </div>
+
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div></div>
+</div>
+<br /><br /><br />

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2022-03-29 12:06:53
+  title: MyString
+  zip_code: MyString
+  description: MyText
+
+two:
+  date: 2022-03-29 12:06:53
+  title: MyString
+  zip_code: MyString
+  description: MyText
