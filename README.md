@@ -6,7 +6,7 @@
 <img align="left" alt="webpage" width="300em" src="https://user-images.githubusercontent.com/90643546/160150740-24fac73b-dd08-4e6e-8ba7-48ba51787af3.png">
 <p align="center"><br/><br/><br/>Want to book an appointment for your pet ? <br/> <br/> Animalib, the solution for Pet owners and Veterinans  <br/>  Make your appointment an easier decision making. </p>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/>
 <h2 align="left">Local installation</h2>
 
 
