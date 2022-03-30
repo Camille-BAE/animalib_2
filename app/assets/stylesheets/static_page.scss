@@ -1,3 +1,15 @@
 // Place all the styles related to the static_page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.team_bg-image{
+  height: 450px;
+  width: 100%;
+  background-image: url('https://www.bls.gov/spotlight/2017/women-at-work/images/cover-image.jpg');
+  background-position: top-center;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
