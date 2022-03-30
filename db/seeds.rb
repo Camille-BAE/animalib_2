@@ -12,9 +12,10 @@ require 'faker'
 Doctor.destroy_all
 
 15.times do
-  Doctor.create(
-    email: Faker::Internet.email,
-    password: Faker::Internet.password(min_length: 6)
+  doctor = Doctor.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email
   )
 end
 
@@ -23,8 +24,9 @@ end
 Client.destroy_all
 
 15.times do
-  Client.create(
-    email: Faker::Internet.email,
-    password: Faker::Internet.password(min_length: 6)
+  client = Client.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email
   )
 end
