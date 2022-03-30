@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  self.abstract_class = true
+  # le <self.abstract_class = true> empêche la page "mot de passe oublié" de s'afficher
 end
