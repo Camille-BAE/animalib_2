@@ -25,6 +25,5 @@ class AppointmentsController < ApplicationController
   end
 
   def destroy
-  
   end
 end

@@ -25,6 +25,5 @@ class SpecialitiesController < ApplicationController
   end
 
   def destroy
-
   end
 end

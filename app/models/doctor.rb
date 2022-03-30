@@ -5,7 +5,7 @@ class Doctor < User
     has_many :appointments
     has_many :clients
     has_many :animals, through: :appointments
-    has_many :specialties
+    has_many :specialities
 
   def welcome_send
     DoctorMailer.welcome_email(self).deliver_now

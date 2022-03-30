@@ -1,10 +1,10 @@
 class ClientsController < ApplicationController
 
-  before_action :authenticate_client!
+  #before_action :authenticate_client!
 
   def show
     @profil_client = Profil_client.find(params[:id])
-    @appointmentss = @profil_client.client.appointments
+    @appointments = @profil_client.client.appointments
   end
 
   def edit
@@ -20,7 +20,7 @@ class ClientsController < ApplicationController
   end
 
   private 
-  
+
   def profil_client_params
     params.require(:profil_client).permit(:name, :city, :phone_number, :business_line)
   end

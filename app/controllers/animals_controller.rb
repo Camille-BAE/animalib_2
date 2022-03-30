@@ -25,6 +25,6 @@ class AnimalsController < ApplicationController
     end
   
     def destroy
-  
+      
     end
 end

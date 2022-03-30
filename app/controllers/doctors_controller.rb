@@ -1,6 +1,6 @@
 class DoctorsController < ApplicationController
 
- before_action :authenticate_doctor!, except: [:index]
+ #before_action :authenticate_doctor!, except: [:index]
 
   def index
     if params[:query].present?

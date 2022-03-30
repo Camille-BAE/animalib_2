@@ -1,5 +1,4 @@
 class StaticPageController < ApplicationController
-  
   def team
   end
 
