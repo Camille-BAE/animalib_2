@@ -8,11 +8,12 @@
 
 require 'faker'
 
-# Fake Doctor
 Doctor.destroy_all
+Client.destroy_all
 
+# Fake Doctor
 15.times do
-  doctor = Doctor.create(
+  Doctor.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email
@@ -21,10 +22,8 @@ end
 
 
 # Fake Client
-Client.destroy_all
-
 15.times do
-  client = Client.create(
+  Client.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email
