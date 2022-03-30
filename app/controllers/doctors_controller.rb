@@ -1,34 +1,37 @@
 class DoctorsController < ApplicationController
+
+ before_action :authenticate_doctor!, except: [:index]
+
   def index
-    # Méthode qui récupère tous les potins et les envoie à la view index (index.html.erb) pour affichage
+    if params[:query].present?
+      @profil_doctor = profil_doctor.search(params[:query])
+    else
+      @profil_doctor = profil_doctor.all
+    end
   end
 
   def show
-    # Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
-  end
-
-  def new
-    # Méthode qui crée un potin vide et l'envoie à une view qui affiche le formulaire pour 'le remplir' (new.html.erb)
-  end
-
-  def create
-    # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
-    # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
-    # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
+    @profil_doctor = profil_doctor.find(params[:id])
+    @appointments = Appointment.where(doctor: @profil_doctor)
   end
 
   def edit
-    # Méthode qui récupère le potin concerné et l'envoie à la view edit (edit.html.erb) pour affichage dans un formulaire d'édition
+    @profil_doctor = profil_doctor.find(params[:id])
   end
 
   def update
-    # Méthode qui met à jour le potin à partir du contenu du formulaire de edit.html.erb, soumis par l'utilisateur
-    # pour info, le contenu de ce formulaire sera accessible dans le hash params
-    # Une fois la modification faite, on redirige généralement vers la méthode show (pour afficher le potin modifié)
+    @profil_doctor = Profil_doctor.find(params[:id])
+    if @profil_doctor.update(profil_doctor_params)
+      redirect_to profil_doctor_path(@profil_doctor), notice: "Votre profil a bien été enregistré."
+    else
+      render :edit, alert: "Veuillez rentrer des champs valides."
+    end
   end
 
-  def destroy
-    # Méthode qui récupère le potin concerné et le détruit en base
-    # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
+private 
+
+  def profil_doctor_params 
+    params.require(:profil_doctor).permit(:first_name, :last_name, :pricing, :description, :city, specialities: [], time_slots: [])
   end
+
 end
