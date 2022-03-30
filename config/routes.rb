@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   resources :cities
   resources :appointments
 
-  get 'static_page/team'
-  get 'static_page/contact'
-  get 'static_page/cgu'
+  get 'team',     to: 'static_page#team'
+  get 'contact',  to: 'static_page#contact'
+  get 'cgu',      to: 'static_page#cgu'
   
   root to: "welcome#index"
 end
