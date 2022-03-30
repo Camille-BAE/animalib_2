@@ -42,11 +42,21 @@ ActiveRecord::Schema.define(version: 2022_03_29_151702) do
   end
 
   create_table "clients", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "zip_code"
+    t.integer "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "doctors", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "name_office"
+    t.string "zip_code"
+    t.integer "phone"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

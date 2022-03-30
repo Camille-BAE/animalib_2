@@ -5,3 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+# Fake Doctor
+Doctor.destroy_all
+
+15.times do
+  doctor = Doctor.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email
+  )
+end
+
+
+# Fake Client
+Client.destroy_all
+
+15.times do
+  client = Client.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email
+  )
+end

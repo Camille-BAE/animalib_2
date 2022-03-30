@@ -11,4 +11,5 @@ class Doctor < User
   def welcome_send
     DoctorMailer.welcome_email(self).deliver_now
   end
+  
 end
