@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
-  get 'static_page/team'
-  get 'static_page/contact'
-  get 'static_page/cgu'
-  # devise_for :users
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :doctors
   devise_for :clients
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  resources :doctors
 
+  resources :clients do
+    resources :animals
+  end
+
+  resources :cities
+  resources :appointments
+
+  get 'team',     to: 'static_page#team'
+  get 'contact',  to: 'static_page#contact'
+  get 'cgu',      to: 'static_page#cgu'
+  
   root to: "welcome#index"
 end

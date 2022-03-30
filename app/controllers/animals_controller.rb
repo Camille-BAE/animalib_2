@@ -1,5 +1,4 @@
 class AnimalsController < ApplicationController
-  class EmployeeProfilesController < ApplicationController
     def index
 
     end
