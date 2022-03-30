@@ -1,5 +1,5 @@
 class DoctorMailer < ApplicationMailer
-    default from: 'no-reply@monsite.fr'
+    default from: 'no-reply@animalib.com'
 
     def welcome_email
       @doctor = params[:doctor]
