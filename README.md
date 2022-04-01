@@ -29,8 +29,8 @@ Rails version : 5.2.6
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://rubyonrails.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg" alt="rails" width="40" height="40"/> </a> <a href="https://www.ruby-lang.org/en/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg" alt="ruby" width="40" height="40"/> </a> </p>
 
 <h2 align="left">Liens</h2>
-<a href="https://animalib-2.herokuapp.com/">lien de l'app => Animalib</a> <br/>
-<a href="https://localhost:3000">lien => localhost</a> <br/>
+<a target="_blank" href="https://animalib-2.herokuapp.com/">lien de l'app => Animalib</a> <br/>
+<a target="_blank" href="https://localhost:3000">lien => localhost</a> <br/>
 
 <h2 align="left">Credit to</h2>
 <a href="https://github.com/Camille-BAE">Camille</a> <br/>
