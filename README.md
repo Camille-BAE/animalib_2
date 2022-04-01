@@ -30,10 +30,10 @@ Rails version : 5.2.6
 
 <h2 align="left">Liens</h2>
 <p>lien de l'app => 
-<a target="_blank" href="https://animalib-2.herokuapp.com/">Animalib</a> <br/>
+<a href="https://animalib-2.herokuapp.com/" target="_blank" >Animalib</a> <br/>
 </p>
 <p>lien vers le localhost=> 
-<a target="_blank" href="https://localhost:3000">localhost</a> <br/>
+<a href="https://localhost:3000" target="_blank" >localhost</a> <br/>
 </p>
 
 <h2 align="left">Credit to</h2>
