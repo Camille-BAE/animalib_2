@@ -22,7 +22,7 @@ class DoctorsController < ApplicationController
   def update
     @profil_doctor = Profil_doctor.find(params[:id])
     if @profil_doctor.update(profil_doctor_params)
-     redirect_to doctor_path(@profil_doctor), notice: "Votre profil a bien été enregistré."
+     redirect_to doctors_path(@profil_doctor), notice: "Votre profil a bien été enregistré."
     else
      render :edit, alert: "Veuillez rentrer des champs valides."
     end
