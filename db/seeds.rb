@@ -1,31 +1,70 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-require 'faker'
-
-Doctor.destroy_all
+Animal.destroy_all
+Appointment.destroy_all
+City.destroy_all
 Client.destroy_all
+Doctor.destroy_all
+Specialty.destroy_all
+User.destroy_all
 
-# Fake Doctor
-15.times do
-  Doctor.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email
+10.times do |i|
+  User.create(
+    email: 'user-mail' + i + '@yopmail.com',
+    encrypted_password: '',
+    reset_password_token: '',
+    reset_password_sent_at: Time.now,
+    remember_created_at: Time.now,
+    type: '',
   )
 end
 
+10.times do |i|
+  Specialty.create(
+    name: '',
+  )
+end
 
-# Fake Client
-15.times do
+10.times do |i|
+  Doctor.create(
+    first_name: '',
+    last_name: '',
+    name_office: '',
+    zip_code: '',
+    phone: rand(10...250),
+    description: 'Lorem ipsum ...',
+  )
+end
+
+10.times do |i|
   Client.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.email
+    first_name: '',
+    last_name: '',
+    zip_code: '',
+    phone: rand(10...250),
+  )
+end
+
+10.times do |i|
+  City.create(
+    name: '',
+    zip_code: '',
+  )
+end
+
+10.times do |i|
+  Appointment.create(
+    date: Time.now,
+    title: '',
+    zip_code: '',
+    description: 'Lorem ipsum ...',
+  )
+end
+
+10.times do |i|
+  Animal.create(
+    name: '',
+    species: '',
+    breed: '',
+    gender: '',
+    birth: Date.now,
   )
 end
