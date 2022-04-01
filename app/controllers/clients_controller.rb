@@ -3,13 +3,8 @@ class ClientsController < ApplicationController
   #before_action :authenticate_client!
 
   def show
-<<<<<<< HEAD
     @profil_client = Profil_client.find(params[:id])
     @appointments = @profil_client.client.appointments
-=======
-    @profil_client = Profil_client.find(params[:id])
-    @appointments = @profil_client.client.appointments
->>>>>>> development
   end
 
   def edit
@@ -19,23 +14,15 @@ class ClientsController < ApplicationController
   def update
     @profil_client  = Profil_client.find(params[:id])  
     if @profil_client.update(profil_client_params)
-      redirect_to profil_client_path(@profil_client), notice: "Votre profil a bien été enregistré."
+      redirect_to client_path(@profil_client), notice: "Votre profil a bien été enregistré."
     else
       render :edit, alert: "Veuillez rentrer des champs valides."
   end
 
-<<<<<<< HEAD
   private 
 
   def profil_client_params
     params.require(:profil_client).permit(:name, :city, :phone_number, :business_line)
   end
-=======
-  private 
-  
-  def profil_client_params
-    params.require(:profil_client).permit(:name, :city, :phone_number, :business_line)
-  end
->>>>>>> development
   
 end
